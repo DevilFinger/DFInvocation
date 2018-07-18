@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Core/NSObject+DFDynamicSelector.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +18,71 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [DFInvocationHelper sharedHelper].isCatchAndThrow = YES;
+    NSArray *tA = @[@"ta1", @"ta2"];
+    NSMutableArray *mA = [NSMutableArray array];
+    [mA addObject:@"m-ma1"];
+
+    NSDictionary *tD = @{@"td1":@"1",
+                         @"td2":@"2",
+                         };
+
+    NSMutableDictionary *mDict = [NSMutableDictionary dictionary];
+    [mDict setObject:@"ob" forKey:@"md"];
+    
+    void (^blk)(NSInteger ) = ^(NSInteger count) {
+        NSLog(@"block %@", @(count));
+    };
+
+//    NSArray *resutlA = [self dfPerformSelector:@selector(testArray:) argument:tA];
+//    NSMutableArray *resutlMA = [self dfPerformSelector:@selector(testMuArray:) argument:mA];
+//
+//    NSDictionary *resDict = [self dfPerformSelector:@selector(testDict:) argument:tD];
+//    NSMutableDictionary *muDict = [self dfPerformSelector:@selector(testMuDict:) argument:mDict];
+//
+//
+//
+//    [self  dfPerformSelector:@selector(block:) argument:blk];
+    
+    [self dfPerformSelector:@selector(testArray:) ];
     return YES;
 }
 
+
+-(void)block:(void (^)(NSInteger a))completion
+{
+    if (completion) {
+        completion(1);
+    }
+}
+
+-(NSArray *)testArray:(NSArray *)arry
+{
+    NSLog(@"%@", [NSThread currentThread]);
+    NSLog(@"%@",arry);
+    return arry;
+}
+
+-(NSMutableArray *)testMuArray:(NSMutableArray *)mArry
+{
+    NSLog(@"%@", [NSThread currentThread]);
+    NSLog(@"%@",mArry);
+    return mArry;
+}
+
+-(NSDictionary *)testDict:(NSDictionary *)dict
+{
+    NSLog(@"%@", [NSThread currentThread]);
+    NSLog(@"%@",dict);
+    return dict;
+}
+
+-(NSMutableDictionary *)testMuDict:(NSMutableDictionary *)mDict
+{
+    NSLog(@"%@", [NSThread currentThread]);
+    NSLog(@"%@",mDict);
+    return mDict;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -13,6 +13,8 @@
 		4DAEC44D20FD92C6003094A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAEC44C20FD92C6003094A1 /* Assets.xcassets */; };
 		4DAEC45020FD92C6003094A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAEC44E20FD92C6003094A1 /* LaunchScreen.storyboard */; };
 		4DAEC45320FD92C6003094A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEC45220FD92C6003094A1 /* main.m */; };
+		4DE8AC6720FF0DD700281E11 /* NSObject+DFDynamicSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8AC6620FF0DD700281E11 /* NSObject+DFDynamicSelector.m */; };
+		4DE8AC6B20FF350400281E11 /* DFInvocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8AC6A20FF350400281E11 /* DFInvocationHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		4DAEC44F20FD92C6003094A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAEC45120FD92C6003094A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DAEC45220FD92C6003094A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DAEC45920FD941D003094A1 /* DFInvocationTypeConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFInvocationTypeConst.h; sourceTree = "<group>"; };
+		4DE8AC6520FF0DD600281E11 /* NSObject+DFDynamicSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DFDynamicSelector.h"; sourceTree = "<group>"; };
+		4DE8AC6620FF0DD700281E11 /* NSObject+DFDynamicSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DFDynamicSelector.m"; sourceTree = "<group>"; };
+		4DE8AC6920FF350400281E11 /* DFInvocationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFInvocationHelper.h; sourceTree = "<group>"; };
+		4DE8AC6A20FF350400281E11 /* DFInvocationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFInvocationHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 		4DAEC44220FD92BA003094A1 /* DFInvocation */ = {
 			isa = PBXGroup;
 			children = (
+				4DAEC46020FDCDDF003094A1 /* Core */,
 				4DAEC44320FD92BA003094A1 /* AppDelegate.h */,
 				4DAEC44420FD92BA003094A1 /* AppDelegate.m */,
 				4DAEC44620FD92BA003094A1 /* ViewController.h */,
@@ -69,6 +77,18 @@
 				4DAEC45220FD92C6003094A1 /* main.m */,
 			);
 			path = DFInvocation;
+			sourceTree = "<group>";
+		};
+		4DAEC46020FDCDDF003094A1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4DAEC45920FD941D003094A1 /* DFInvocationTypeConst.h */,
+				4DE8AC6520FF0DD600281E11 /* NSObject+DFDynamicSelector.h */,
+				4DE8AC6620FF0DD700281E11 /* NSObject+DFDynamicSelector.m */,
+				4DE8AC6920FF350400281E11 /* DFInvocationHelper.h */,
+				4DE8AC6A20FF350400281E11 /* DFInvocationHelper.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +163,8 @@
 			files = (
 				4DAEC44820FD92BA003094A1 /* ViewController.m in Sources */,
 				4DAEC45320FD92C6003094A1 /* main.m in Sources */,
+				4DE8AC6B20FF350400281E11 /* DFInvocationHelper.m in Sources */,
+				4DE8AC6720FF0DD700281E11 /* NSObject+DFDynamicSelector.m in Sources */,
 				4DAEC44520FD92BA003094A1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
