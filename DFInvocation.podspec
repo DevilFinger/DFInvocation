@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/DevilFinger/DFInvocation.git", :commit => "508095889ac4a6c2f3d7d87b02cc0ead263450a8" }
+  s.source       = { :git => "https://github.com/DevilFinger/DFInvocation.git",:tag => version}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
