@@ -15,10 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DFInvocationHelper : NSObject
 
 /**
- When there is an error, whether to throw an exception
+ When there is an error, whether to throw an exception. Default is "NO"
  */
 @property (nonatomic, assign) BOOL isCatchAndThrow;
 
+
+/**
+ Singleton
+ */
 + (instancetype)sharedHelper;
 
 /**

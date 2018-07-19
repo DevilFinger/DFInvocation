@@ -1,12 +1,12 @@
 //
-//  NSObject+DFDynamicSelector.m
+//  NSObject+DFInvocation.m
 //  DevilFinger Team
 //
 //  Created by RaymondChen on 15/03/2018.
 //  Copyright © 2018 DevilFinger Team. All rights reserved.
 //
 
-#import "NSObject+DFDynamicSelector.h"
+#import "NSObject+DFInvocation.h"
 
 
 @implementation NSObject (DFDynamicSelector)
@@ -53,7 +53,7 @@
     [sig isOneway];
     
     if (!sig){
-        if ([DFInvocationHelper sharedHelper]) {
+        if ([DFInvocationHelper sharedHelper].isCatchAndThrow) {
             [self doesNotRecognizeSelector:sel];
         }
         else
@@ -62,7 +62,7 @@
     
     NSInvocation *inv = [NSInvocation invocationWithMethodSignature:sig];
     if (!inv){
-        if ([DFInvocationHelper sharedHelper]) {
+        if ([DFInvocationHelper sharedHelper].isCatchAndThrow) {
             [self doesNotRecognizeSelector:sel];
         }
         else
