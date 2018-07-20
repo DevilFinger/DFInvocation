@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DFInvocation"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Coding base on NSInvocation, let people fast and easy to use in your iOS project"
 
 
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/DevilFinger/DFInvocation.git",:tag => "1.0.1"}
+  s.source       = { :git => "https://github.com/DevilFinger/DFInvocation.git",:tag => "1.0.2"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
