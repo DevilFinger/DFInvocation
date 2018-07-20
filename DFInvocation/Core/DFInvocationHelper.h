@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL isCatchAndThrow;
 
+@property (nonatomic, readonly, copy) NSString *version;
+
 
 /**
  Singleton
