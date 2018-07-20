@@ -73,14 +73,14 @@ and then call **dfPerformSelector** like this:
 **In the same time, if the method will return value, "dfPerformSelector" also return it.**
 
 
-##How to Catch An Error
-###If your want to catch error when perform selector is mistake, you should change this to "YES".(Default is "NO")
+## How to Catch An Error
+### If your want to catch error when perform selector is mistake, you should change this to "YES".(Default is "NO")
 
 ```
 [DFInvocationHelper sharedHelper].isCatchAndThrow = YES;
 ```
 
-###For more usage, see the code in the project
+### For more usage, see the code in the project
 
 
 
