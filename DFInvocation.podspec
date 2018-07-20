@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DFInvocation"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Coding base on NSInvocation, let people fast and easy to use in your iOS project"
 
 
