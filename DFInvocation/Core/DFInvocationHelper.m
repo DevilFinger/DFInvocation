@@ -26,7 +26,7 @@ static DFInvocationHelper *_helper = nil;
     self = [super init];
     if (self) {
         self.isCatchAndThrow = NO;
-        _version = @"1.0.1";
+        _version = @"1.0.2";
     }
     return self;
 }
